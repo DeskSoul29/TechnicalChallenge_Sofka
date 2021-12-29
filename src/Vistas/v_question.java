@@ -54,6 +54,7 @@ public class v_question extends javax.swing.JFrame {
         
         Respuestas res = new Respuestas();
         if(numR == 1){
+            res.setComprobar(numR);
             res.setRespuesta(resp1);
         }else if(numR == 2){
             res.setRespuesta(resp2);
@@ -62,12 +63,6 @@ public class v_question extends javax.swing.JFrame {
         }else{
             res.setRespuesta(resp4);
         }
-        
-        
-        
-        res.setComprobar(numR);
-        
-        
     }
     
     @SuppressWarnings("unchecked")
