@@ -40,7 +40,8 @@ public class DAOjugadorImpl extends Conexion implements DAOjugador{
         
         try {
             this.conectar();
-            PreparedStatement st = this.con.prepareStatement("SELECT id, nom_jugador, puntos FROM historico limit 10");
+            PreparedStatement st = this.con.prepareStatement("SELECT id, nom_jugador, puntos FROM historico WHERE puntos != 0 "
+                    + "ORDER BY puntos DESC LIMIT 10");
             miLista = new ArrayList();
             ResultSet rs = st.executeQuery();
             while (rs.next()) {

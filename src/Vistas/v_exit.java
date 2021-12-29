@@ -24,23 +24,17 @@ public class v_exit extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 8)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Programa Desarrollado por Dairon Rosas, Todos los Derechos Reservados.");
-
+        jLabel4.setBackground(new java.awt.Color(51, 51, 255));
         jLabel4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 0, 0));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("SCORE");
 
@@ -62,67 +56,55 @@ public class v_exit extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setBackground(new java.awt.Color(51, 51, 255));
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("¡VERY GOOD!");
 
+        jLabel3.setBackground(new java.awt.Color(51, 51, 255));
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 0, 0));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("NAME");
 
+        jLabel5.setBackground(new java.awt.Color(51, 51, 255));
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 0, 0));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("###");
-
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 102, 0));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("GAME OVER");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(291, 291, 291))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(169, 169, 169))))
+                .addContainerGap(282, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(291, 291, 291))
             .addGroup(layout.createSequentialGroup()
                 .addGap(143, 143, 143)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
+                .addGap(158, 158, 158)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
+                .addGap(54, 54, 54)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addContainerGap())
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         pack();
@@ -175,11 +157,9 @@ public class v_exit extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
     
     class Fondo_menu extends JPanel{
@@ -187,7 +167,7 @@ public class v_exit extends javax.swing.JFrame {
         
         @Override
         public void paint (Graphics g){
-            Imagen = new ImageIcon(getClass().getResource("/Fondos/retiro.png")).getImage(); //cambiamos el fondo del menu por una imagen
+            Imagen = new ImageIcon(getClass().getResource("/Images/gameover.jpg")).getImage(); //cambiamos el fondo del menu por una imagen
             g.drawImage(Imagen, 0, 0, getWidth(), getHeight(), this);            
             setOpaque(false);            
             super.paint(g);            

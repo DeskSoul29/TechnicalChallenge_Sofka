@@ -22,20 +22,13 @@ public class v_lost extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 8)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Programa Desarrollado por Dairon Rosas, Todos los Derechos Reservados.");
-
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(255, 255, 51));
         jButton1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("OK");
@@ -56,62 +49,47 @@ public class v_lost extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Lo Sentimos, has Perdido!!!!");
+        jLabel1.setText("¡YOU HAVE LOST!");
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Dairon");
-
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("DERROTA");
+        jLabel3.setText("NAME");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(153, Short.MAX_VALUE)
+                .addContainerGap(142, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(169, 169, 169))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(281, 281, 281))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(184, 184, 184))
+                        .addGap(277, 277, 277))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(135, 135, 135))
+                        .addGap(128, 128, 128))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(255, 255, 255))))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(115, 115, 115))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(78, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addContainerGap(221, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(91, 91, 91)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(175, 175, 175)
-                .addComponent(jLabel2)
-                .addContainerGap())
+                .addGap(135, 135, 135))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        jButton1.setBackground(Color.ORANGE);
+        jButton1.setBackground(Color.GREEN);
     }//GEN-LAST:event_jButton1MouseEntered
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
@@ -161,9 +139,7 @@ public class v_lost extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 
     class Fondo_menu extends JPanel{
@@ -171,7 +147,7 @@ public class v_lost extends javax.swing.JFrame {
         
         @Override
         public void paint (Graphics g){
-            Imagen = new ImageIcon(getClass().getResource("/Fondos/pierde.jpg")).getImage(); //cambiamos el fondo del menu por una imagen
+            Imagen = new ImageIcon(getClass().getResource("/Images/gameover.jpg")).getImage(); //cambiamos el fondo del menu por una imagen
             g.drawImage(Imagen, 0, 0, getWidth(), getHeight(), this);            
             setOpaque(false);            
             super.paint(g);            
