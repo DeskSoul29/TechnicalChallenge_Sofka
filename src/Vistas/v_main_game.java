@@ -31,7 +31,7 @@ public class v_main_game extends javax.swing.JFrame{
         guardar_datos();
         nivel = 1;
         String[] args = null;
-//        v_pierde.main(args);
+        v_lost.main(args);
         dispose();
     }
     
