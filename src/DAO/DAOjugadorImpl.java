@@ -34,6 +34,23 @@ public class DAOjugadorImpl extends Conexion implements DAOjugador{
     }
     
     @Override
+    public void guardarPregunta (Preguntas preg) throws Exception{
+        try{
+            this.conectar();
+            PreparedStatement st = this.con.prepareStatement("INSERT INTO preguntas(id, pregunta, nivel, categoria) VALUES (?,?,?,?)");
+            st.setInt(1, preg.getId());
+            st.setString(2, preg.getPregunta());
+            st.setInt(3, preg.getNivel());
+            st.setString(4, preg.getCategoria());
+            st.executeUpdate();
+        }catch(Exception e){
+            throw e;
+        }finally{
+            this.cerrar();
+        }
+    }
+    
+    @Override
     public ArrayList<Jugadores> buscarUsuarios() throws Exception {
         ArrayList<Jugadores> miLista;
         Jugadores persona;
@@ -41,7 +58,7 @@ public class DAOjugadorImpl extends Conexion implements DAOjugador{
         try {
             this.conectar();
             PreparedStatement st = this.con.prepareStatement("SELECT id, nom_jugador, puntos FROM historico WHERE puntos != 0 "
-                    + "ORDER BY puntos DESC LIMIT 10");
+                    + "ORDER BY horario DESC LIMIT 10");
             miLista = new ArrayList();
             ResultSet rs = st.executeQuery();
             while (rs.next()) {

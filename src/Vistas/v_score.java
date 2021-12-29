@@ -37,11 +37,11 @@ public class v_score extends javax.swing.JFrame {
             DAOjugador miPersonaDao = new DAOjugadorImpl();
             ArrayList<Jugadores> miLista = miPersonaDao.buscarUsuarios();
 
-            String matrizInfo[][]=new String[miLista.size()][3];
+            String matrizInfo[][] = new String[miLista.size()][3];
             for (int i = 0; i < miLista.size(); i++) {
-                matrizInfo[i][0]=miLista.get(i).getId()+"";
-                matrizInfo[i][1]=miLista.get(i).getNom_jugador()+"";
-                matrizInfo[i][2]=miLista.get(i).getPuntos()+"";
+                matrizInfo[i][0]= (i+1)+"";
+                matrizInfo[i][1]= miLista.get(i).getNom_jugador()+"";
+                matrizInfo[i][2]= miLista.get(i).getPuntos()+"";
             }
             return matrizInfo;
     }
