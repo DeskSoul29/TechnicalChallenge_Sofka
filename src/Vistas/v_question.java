@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 public class v_question extends javax.swing.JFrame {
     
     static String nombre; 
-    int valorEntero = (int) Math.floor(Math.random()*(1-99+1)+99);
+    int valorEntero = (int) Math.floor(Math.random()*(1-1000+1)+1000);
     
     public v_question() {
         Fondo_menu fondo = new Fondo_menu();

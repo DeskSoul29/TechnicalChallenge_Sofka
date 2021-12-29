@@ -430,7 +430,7 @@ public class v_main_game extends javax.swing.JFrame{
         nivel = 1;
         puntos = 0;
         String[] args = null;
-//        v_abandona.main(args);
+        v_exit.main(args);
         dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -456,12 +456,7 @@ public class v_main_game extends javax.swing.JFrame{
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(v_main_game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 v_main_game mostrar = new v_main_game();
