@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import DTO.Jugador;
+import DTO.Jugadores;
 import DTO.Preguntas;
 import DTO.Respuestas;
 
@@ -32,7 +33,33 @@ public class DAOjugadorImpl extends Conexion implements DAOjugador{
         }
     }
     
-    
+    @Override
+    public ArrayList<Jugadores> buscarUsuarios() throws Exception {
+        ArrayList<Jugadores> miLista;
+        Jugadores persona;
+        
+        try {
+            this.conectar();
+            PreparedStatement st = this.con.prepareStatement("SELECT id, nom_jugador, puntos FROM historico limit 10");
+            miLista = new ArrayList();
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                persona = new Jugadores();
+                persona.setId(Integer.parseInt(rs.getString("id")));
+                persona.setNom_jugador(rs.getString("nom_jugador"));
+                persona.setPuntos(Integer.parseInt(rs.getString("puntos")));
+                miLista.add(persona);
+            }
+            rs.close();
+            st.close();
+        }catch(Exception e){
+            throw e;
+        }finally{
+            this.cerrar();
+        }            
+        return miLista;
+    }
+
 
        
     @Override

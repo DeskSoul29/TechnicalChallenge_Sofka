@@ -1,63 +1,50 @@
 package Vistas;
 
-import Conexion.Conexion;
-import static Conexion.Conexion.con;
+import DAO.DAOjugadorImpl;
 import DTO.Jugadores;
+import interfaces.DAOjugador;
 import java.awt.Color;
-import java.sql.PreparedStatement;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
 public class v_score extends javax.swing.JFrame {
     
-    public DefaultTableModel modelo=new DefaultTableModel();
+    private DefaultTableModel modelo;
     
-    public v_score() {
-                                cargaTabla();
-
+    public v_score() throws Exception {
         Fondo_menu fondo = new Fondo_menu();
-
         this.setContentPane(fondo);
         initComponents();
+        construirTabla();
 
     }
     
-    public void cargaTabla(){
-    Statement ejecutor=null;
-        System.out.println("hhh");
-    modelo.addColumn("Posición");
-    modelo.addColumn("Nombre");
-    modelo.addColumn("Puntos");
-    modelo.setRowCount(0);
-    String datos[]=new String[4];
-        try {
-            PreparedStatement st = Conexion.con.prepareStatement("SELECT `id`, `nom_jugador`, `puntos` FROM `historico` limit 10");
-            System.out.println(st);
-            ejecutor = Conexion.con.createStatement();
-            ejecutor.setQueryTimeout(10);
-            ResultSet rs = st.executeQuery();
-            System.out.println(rs);
-            while(rs.next()==true){
-                datos[0]=rs.getString("id");
-                datos[1]=rs.getString("nom_jugador");
-                datos[2]=rs.getString("puntos");
-                modelo.addRow(datos);
+    private void construirTabla() throws Exception {
+        String titulos[]={ "Id", "Nombre", "Puntaje" };
+        String informacion[][] = obtenerMatriz();
+
+        modelo = new DefaultTableModel(informacion,titulos);
+        jTable1.setModel(modelo);
+    }
+    
+    private String[][] obtenerMatriz() throws Exception {
+            DAOjugador miPersonaDao = new DAOjugadorImpl();
+            ArrayList<Jugadores> miLista = miPersonaDao.buscarUsuarios();
+
+            String matrizInfo[][]=new String[miLista.size()][3];
+            for (int i = 0; i < miLista.size(); i++) {
+                matrizInfo[i][0]=miLista.get(i).getId()+"";
+                matrizInfo[i][1]=miLista.get(i).getNom_jugador()+"";
+                matrizInfo[i][2]=miLista.get(i).getPuntos()+"";
             }
-            jTable1.setModel(modelo);
-
-        } catch (Exception e) {
-        }
-        
+            return matrizInfo;
     }
-    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -103,20 +90,18 @@ public class v_score extends javax.swing.JFrame {
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null}
             },
             new String [] {
-                "Posición", "Nombre", "Puntos"
+                "Title 1", "Title 2", "Title 3"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -199,7 +184,12 @@ public class v_score extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                v_score mostrar = new v_score();
+                v_score mostrar = null;
+                try {
+                    mostrar = new v_score();
+                } catch (Exception ex) {
+                    Logger.getLogger(v_score.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 mostrar.setLocationRelativeTo(null);
                 mostrar.setResizable(false);
                 mostrar.setVisible(true);
