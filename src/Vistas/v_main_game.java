@@ -50,7 +50,7 @@ public class v_main_game extends javax.swing.JFrame{
                 nivel = 1;
                 puntos = 0;
                 String[] args = null;
-//                v_gana.main(args);
+                v_winner.main(args);
                 dispose();
             }  
     }
