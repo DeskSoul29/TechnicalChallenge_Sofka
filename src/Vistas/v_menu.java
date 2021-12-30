@@ -81,6 +81,7 @@ public class v_menu extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("ADD QUESTION");
+        jButton3.setEnabled(false);
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButton3MouseEntered(evt);
