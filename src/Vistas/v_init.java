@@ -47,7 +47,7 @@ public class v_init extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Player's Name");
 
@@ -74,12 +74,12 @@ public class v_init extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("SOFKA GAME");
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("¡LET'S START!");
 
@@ -249,7 +249,7 @@ class Fondo_menu extends JPanel{
 
     @Override
     public void paint (Graphics g){
-        Imagen = new ImageIcon(getClass().getResource("/Images/inicial.png")).getImage(); //cambiamos el fondo del menu por una imagen
+        Imagen = new ImageIcon(getClass().getResource("/Images/58914.jpg")).getImage(); //cambiamos el fondo del menu por una imagen
         g.drawImage(Imagen, 0, 0, getWidth(), getHeight(), this);            
         setOpaque(false);            
         super.paint(g);            
