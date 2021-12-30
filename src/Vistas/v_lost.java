@@ -1,5 +1,3 @@
-
-
 package Vistas;
 
 import java.awt.Color;

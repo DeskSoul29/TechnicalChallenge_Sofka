@@ -85,7 +85,13 @@ public class DAOjugadorImpl extends Conexion implements DAOjugador{
         ArrayList<Preguntas> lista_pre = null;
         try{
             this.conectar();
-            PreparedStatement st = this.con.prepareStatement("SELECT * FROM preguntas WHERE nivel = "+x);
+            PreparedStatement st;
+            if(x != 0){
+                st = this.con.prepareStatement("SELECT * FROM preguntas WHERE nivel = "+x);
+            }else{
+                st = this.con.prepareStatement("SELECT * FROM preguntas");
+            }
+            
             lista_pre = new ArrayList();
             ResultSet rs = st.executeQuery();
             while (rs.next()){
